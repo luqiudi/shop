@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="浪" @click="lang()">
+        <input type="button" value="稳" @click="wen()">
+        <h2>{{msg}}</h2>
+
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '1234567',
+            data: '',
+            lang1: 'm(o_ _)m',
+            wen2: 'm(o_ _)m'
+        },
+        methods: {
+            lang() {
+                var start = this.msg.substring(0, 1);
+                var end = this.msg.substring(1);
+                this.msg = end + start;
+            },
+            wen() {
+                this.data += '稳'
+            }
+        }
+    });
+</script>
+
+</html>

@@ -21,15 +21,24 @@
         <input type="button" value="我是按钮" v-bind:title="myTitle+'123'"></button>
         <!-- v-bind变体 -->
         <input type="button" value="我是按钮" :title="myTitle+'123'"></button>
+        <!-- v-on -->
+        <input type="button" value="v-on测试" v-on:click="myClick()">
+        <!-- v-on变体 -->
+        <input type="button" value="v-on变体测试" @click="myClick()">
     </div>
 </body>
 <script>
     var vm = new Vue({
-        el: '#app',
-        data: {
+        el: '#app'
+        ,data: {
             msg: 'dizzy',
             msg2: '<h4>你好,h4</h4>',
             myTitle:'我的标题'
+        }
+        ,methods:{
+            myClick(){
+                alert(this.myTitle);
+            }
         }
     });
 </script>
