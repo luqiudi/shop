@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- v-cloak -->
+        <p v-cloak>++++++++++{{ msg }}----------</p>
+        <!-- v-text -->
+        <h4 v-text="msg">12312</h4>
+        <!-- v-html将变量渲染为html -->
+        <div v-html="msg2">123</div>
+        <!-- v-bind  -->
+        <input type="button" value="我是按钮" v-bind:title="myTitle+'123'"></button>
+        <!-- v-bind变体 -->
+        <input type="button" value="我是按钮" :title="myTitle+'123'"></button>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: 'dizzy',
+            msg2: '<h4>你好,h4</h4>',
+            myTitle:'我的标题'
+        }
+    });
+</script>
+
+</html>

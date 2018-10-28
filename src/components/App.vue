@@ -26,7 +26,7 @@
             </el-submenu>
           </el-submenu>
           <el-menu-item index="3" disabled>消息中心</el-menu-item>
-          <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+          <el-menu-item index="4"><a href="https://www.baidu.com" target="_blank">订单管理</a></el-menu-item>
         </el-menu>
       </el-container>
       </el-header>
@@ -37,25 +37,25 @@
 </template>
 
 <script>
-  import 'element-ui/lib/theme-chalk/menu.css'
-   export default {
-    data() {
-      return {
-        activeIndex: '1',
-        activeIndex2: '1'
-      };
-    },
-    methods: {
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      }
+import "element-ui/lib/theme-chalk/menu.css";
+export default {
+  data() {
+    return {
+      activeIndex: "1",
+      activeIndex2: "1"
+    };
+  },
+  methods: {
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
     }
   }
+};
 </script>
 <style lang="scss">
 .el-header,
 .el-footer {
-  background-color: #b3c0d1;
+  background-color: #569efc;
   color: #333;
   text-align: center;
   line-height: 60px;
@@ -69,7 +69,7 @@
 }
 
 .el-main {
-  background-color: #e9eef3;
+  background-color: #ffffff;
   color: #333;
   text-align: center;
   line-height: 50rem;

@@ -6,7 +6,7 @@
 // });
 import Vue from 'vue';
 import ElementUI from 'element-ui';
-import App from './components/App.vue';
+import App from './components/App2.vue';
 Vue.use(ElementUI);
 Vue.component()
 var vm = new Vue({
