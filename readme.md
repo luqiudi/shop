@@ -35,6 +35,8 @@ npm i babel-preset-env babel-preset-stage-0 -D
     $ git help <verb>
     $ git <verb> --help
     $ man git-<verb>
+    增加文件
+    git add 文件名
     
 ```
 

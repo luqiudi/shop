@@ -24,7 +24,8 @@
             msg: '1234567',
             data: '',
             lang1: 'm(o_ _)m',
-            wen2: 'm(o_ _)m'
+            wen2: 'm(o_ _)m',
+            timer: null
         },
         methods: {
             lang() {
@@ -34,6 +35,14 @@
             },
             wen() {
                 this.data += '稳'
+            },
+            setTimer() {
+                var timer = this.timer || setInterval(this.lang, 1000)
+            },
+            cleanTimer(){
+                if(timer){
+                    clearInterval(this.timer)
+                }
             }
         }
     });
