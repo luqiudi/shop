@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- computed 属性在引用属性未改变的情况下，只计算第一次 -->
+        <p>{{this.msg}}</p>
+        <p>{{this.reverseMsg}}</p>
+        firstName + lastName watch
+        <input v-model="firstName" type="text" />
+        <input v-model="lastName" type="text" />
+        <p>{{fullName}}</p>
+
+        firstName + lastName computed
+        <input v-model="firstName1" type="text" />
+        <input v-model="lastName1" type="text" />
+        <p>{{fullName1}}</p>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: 'dizi',
+            firstName: 'qiudi',
+            lastName: 'lu',
+            fullName: 'qiudi lu',
+            firstName1: 'qiudi',
+            lastName1: 'lu'
+        },
+        methods: {},
+        computed: {
+            reverseMsg() {
+                console.log('已计算');
+                return this.msg.split('').reverse().join('');
+            },
+            fullName1: {
+                set(newValue) {
+                    var names = newValue.split(' ')
+                    this.firstName1 = names[0]
+                    this.lastName1 = names[names.length - 1]
+                },
+                get() {
+                    return this.firstName1 + this.lastName1
+                }
+            }
+        },
+        watch: {
+            firstName(val) {
+                this.fullName = val + this.lastName
+            },
+            lastName(val) {
+                this.fullName = this.firstName + val
+            }
+        }
+    });
+</script>
+
+</html>

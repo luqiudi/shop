@@ -42,6 +42,14 @@ npm i babel-preset-env babel-preset-stage-0 -D
 
 
 ## 已完成进度
+## 事件修饰
+    <!-- 阻止单击事件继续传播 -->
+    .stop
+    .prevent
+    .capture
+    .self
+    .once
+    .passive
 2018年10月19日22:45:11
 ```
 js、html、css代码热更新
