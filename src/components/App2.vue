@@ -1,34 +1,31 @@
 <template>
-    <div class="container">
-        <div class="ball">
-
-        </div>
-    </div>
-  
+    <el-container class="container">
+      <el-header class="header">
+        <el-breadcrumb separator="/">
+  <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+  <el-breadcrumb-item :to="{path:'./index.html'}">活动管理</el-breadcrumb-item>
+  <el-breadcrumb-item>活动列表</el-breadcrumb-item>
+  <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+</el-breadcrumb>
+      </el-header>
+      <el-main class="main">我是</el-main>
+    </el-container>
 </template>
 
 <script>
 export default {
-  name: "ball",
   data() {
     return {};
   }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .container {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  .ball {
-    background-color: rgb(255, 0, 0);
-    margin-left: auto;
-    margin-right: auto;
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
+  .header {
+  }
+  main {
+    background-color: #fff;
   }
 }
 </style>
