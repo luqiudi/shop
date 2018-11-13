@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import nihao from './components/movieLabel'
+import nihao from 'components/baseComponents/my-button';
 export default {
   name: "contianer",
   components: {
