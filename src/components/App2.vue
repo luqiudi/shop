@@ -28,4 +28,5 @@ export default {
   main {
     background-color: #fff;
   }
+}
 </style>

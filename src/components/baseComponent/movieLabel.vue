@@ -1,6 +1,6 @@
 <template>
   <div class="nihao">
-123
+    123 
   </div>
 </template>
 
@@ -17,6 +17,6 @@ export default {
 
 <style lang="scss" scoped>
   .nihao{
-
+    
   }
 </style>

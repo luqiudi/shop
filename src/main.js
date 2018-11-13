@@ -7,13 +7,14 @@
 import Vue from 'vue';
 import ElementUI from 'element-ui';
 import App from './components/index.vue';
+import 'font-awesome/css/font-awesome.css'
 // import movieLabel from './components/movieLabel.vue';
 Vue.use(ElementUI);
 Vue.component()
 var vm = new Vue({
     el: '#app',
     data: {
-        message: 'hello!dizi'
+        message: 'hello!dizi',
     },
     components: {
         App
