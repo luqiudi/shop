@@ -23,6 +23,7 @@ export default {
 <style lang="scss">
 .container {
   .header {
+    margin: 0;
   }
   main {
     background-color: #fff;

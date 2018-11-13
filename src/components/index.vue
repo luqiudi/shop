@@ -17,7 +17,7 @@
         </ul>
       </nav>
       <article>
-        <mlb>123</mlb>
+        <nihao>123</nihao>
       </article>
       <footer>
         <div class="footer_container">
@@ -29,11 +29,11 @@
 </template>
 
 <script>
-import mlb from '../src/components/baseCompontents/movie-label.vue';
+import nihao from './components/movieLabel';
 export default {
   name: "contianer",
-  components:{
-    mlb
+  components: {
+    'nihao':nihao
   },
   data() {
     return {};
