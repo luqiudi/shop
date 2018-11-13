@@ -11,8 +11,8 @@
 
 <body>
     <div id="app">
-        <input type="button" value="浪" @click="setTimer()">
-        <input type="button" value="稳" @click="cleanTimer()">
+        <input type="button" value="浪" @click="lang()">
+        <input type="button" value="稳" @click="wen()">
         <h2>{{msg}}</h2>
 
     </div>
@@ -37,17 +37,12 @@
                 this.data += '稳'
             },
             setTimer() {
-                console.log('添加timer');
-                console.log(this.timer);
-                if(this.timer==null){
-                    this.timer = this.timer || setInterval(this.lang, 1000)
-                }
+                var timer = this.timer || setInterval(this.lang, 1000)
             },
             cleanTimer(){
-                if(this.timer){
-                    console.log('清除timer！');
+                if(timer){
                     clearInterval(this.timer)
-                    this.timer = null;
+                    clog
                 }
             }
         }

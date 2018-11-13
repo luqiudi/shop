@@ -6,7 +6,8 @@
 // });
 import Vue from 'vue';
 import ElementUI from 'element-ui';
-import App from './components/App3.vue';
+import App from './components/index.vue';
+// import movieLabel from './components/movieLabel.vue';
 Vue.use(ElementUI);
 Vue.component()
 var vm = new Vue({
