@@ -17,7 +17,8 @@
         </ul>
       </nav>
       <article>
-        <nihao>123</nihao>
+        <!-- <ni-hao></ni-hao> -->
+        <nihao></nihao>
       </article>
       <footer>
         <div class="footer_container">
@@ -29,11 +30,11 @@
 </template>
 
 <script>
-import nihao from './components/movieLabel';
+import nihao from './components/movieLabel'
 export default {
   name: "contianer",
   components: {
-    'nihao':nihao
+    "nihao":nihao
   },
   data() {
     return {};
