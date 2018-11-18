@@ -15,5 +15,6 @@ export default {
 
 <style lang="scss" scoped>
 .nihao {
+  margin: 0;
 }
 </style>

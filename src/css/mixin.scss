@@ -1,0 +1,36 @@
+@mixin setSquareWidthHeight($length) {
+    width: $length;
+    height: $length;
+}
+
+@mixin animate_click {
+    &:active {
+        color: rgb(161, 161, 161);
+        right: -0.5px;
+        bottom: -0.5px;
+    }
+}
+
+@mixin streak_background($degree:45deg,
+$shadowPercent:3%,
+$lightColor:#4a7bff,
+$darkColor:#52f3ff) {
+
+    background: linear-gradient( // 阴影部分
+        rgba(74, 123, 255, 1) 23%,
+        rgba(74, 123, 255, 0.75) 25%,
+        rgba(82, 243, 255, 1) 0%,
+
+        rgba(82, 243, 255, 1) 47%,
+        rgba(74, 123, 255, 0.75) 50%,
+        rgba(74, 123, 255, 1) 0%,
+
+        rgba(74, 123, 255, 1) 73%,
+        rgba(74, 123, 255, 0.75) 75%,
+        rgba(82, 243, 255, 1) 0%,
+
+        rgba(82, 243, 255, 1) 97%,
+        rgba(74, 123, 255, 0.75) 100%);
+
+
+}

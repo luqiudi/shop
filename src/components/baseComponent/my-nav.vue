@@ -2,18 +2,13 @@
   <div class="my-nav">
       <nav>
         <ul>
-          <!-- <li><a>1</a></li>
-          <li><a>2</a></li>
-          <li><a>3</a></li>
-          <li><a>4</a></li>
-          <li><a>5</a></li> -->
-          <!-- <li>电影列表</li>
-          <li>分类查看</li>
-          <li>最近观看</li>
-          <li>系统管理</li> -->
-          <li v-for="menuItem in parentMenuItmes" :key="menuItem.id">
+          <router-link tag="li" v-for="menuItem in parentMenuItmes" :key="menuItem.id" 
+          :to="menuItem.url"  >
+            {{menuItem.content}}
+          </router-link>
+          <!-- <li v-for="menuItem in parentMenuItmes" :key="menuItem.id">
               {{ menuItem.content }}
-          </li>
+          </li> -->
         </ul>
       </nav>
   </div>
@@ -21,25 +16,26 @@
 
 <script>
 export default {
-  name: 'my-nav',
-  props:['parentMenuItmes'],
-  data() { 
-    return {
-
-    }
+  name: "my-nav",
+  props: ["parentMenuItmes"],
+  data() {
+    return {};
   }
- }
+};
 </script>
 
 <style lang="scss" scoped>
-  .my-nav{
-       nav {
+.my-nav {
+  width: 80%;
+  display: inline-block;
+  nav {
     // border: 1px solid rgb(189, 184, 184);
     border-radius: 3px 3px 3px 3px;
     box-shadow: 1px 1px 2px 1px rgb(176, 203, 221);
     padding: 0px 0px 0px 0%;
     width: 75%;
     margin: 10px 10px 10px 10px;
+    
     ul {
       display: flex;
       list-style: none;
@@ -68,5 +64,5 @@ export default {
       }
     }
   }
-  }
+}
 </style>

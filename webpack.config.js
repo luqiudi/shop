@@ -4,6 +4,8 @@ var path = require('path');
 var htmlWebpackPlugin = require('html-webpack-plugin');
 var VueLoaderPlugin = require('vue-loader/lib/plugin')
 var webpack = require('webpack');
+
+// var fawebpack = require('font-awesome-webpack');
 console.log('123123'+__dirname);
 module.exports = {
     //入口
@@ -41,7 +43,24 @@ module.exports = {
             ,{test:/\.scss$/,use:['style-loader','css-loader','sass-loader']}
             ,{test:/\.less$/,use:['style-loader','css-loader','less-loader']}
             ,{test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=7632&name=[hash]-[name].[ext]'}
-            ,{test:/\.(ttf|eot|svg|woff|woff2)$/,use:'url-loader'}
+            // ,{
+            //     test: /\.(eot|svg|ttf|woff|woff2)\w*/,
+            //     loader: 'file-loader?publicPath=/static/res/&outputPath=font/'
+            // }
+            ,{test:/\.(ttf|eot|svg|woff|woff2)$/,use:'url-loader?limit=1000000&name=[path][name].[ext]'}
+            // ,{
+            //     test:/\.(ttf|eot|svg|woff|woff2)$/,
+            //     use:[{
+            //         loader:'url-loader',
+            //         options: {
+            //             name: '[path][name].[ext]',//path为相对于context的路径
+            //             context:'src',
+            //             publicPath:function(url){//返回最终的资源相对路径
+            //                 return path.relative(distDir,url).replace(/\\/g,'/');
+            //             }
+            //         }
+            //     }]
+            // }
             ,{test:/\.js$/,use:'babel-loader',exclude:'/node_modules/'}
             ,{test:/\.vue$/,use:'vue-loader'}
         ]
